@@ -1,3 +1,4 @@
 <!-- <app-hello-world></app-hello-world> -->
-<h1>{{ title }}</h1>
+<h1>{{ title }}, {{ userName }}</h1>
 <img [src]="logoUrl" alt="BridgeLabz Logo" width="200" (click)="openBridgeLabzSite()" style="cursor: pointer;">
+<input type="text" [(ngModel)]="userName" placeholder="Enter your name">
