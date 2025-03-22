@@ -1,4 +1,12 @@
 <!-- <app-hello-world></app-hello-world> -->
-<h1>{{ title }}, {{ userName }}</h1>
+<!-- <h1>{{ title }}, {{ userName }}</h1> -->
+<h1>{{ title }}<span *ngIf="!errorMessage && userName">, {{ userName }}</span></h1>
 <img [src]="logoUrl" alt="BridgeLabz Logo" width="200" (click)="openBridgeLabzSite()" style="cursor: pointer;">
-<input type="text" [(ngModel)]="userName" placeholder="Enter your name">
+<!-- <input type="text" [(ngModel)]="userName" placeholder="Enter your name"> -->
+
+<!-- Input Field for User Name -->
+<input type="text" [(ngModel)]="userName" (input)="validateName()" placeholder="Enter your name">
+
+<!-- Display error message if validation fails -->
+<p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
+
