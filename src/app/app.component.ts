@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   // title = 'Helloworld';
   title: string = "Hello from BridgeLabz";
+  logoUrl: string = "assets/BridgeLabzLogo.png";  // Image path
 }
